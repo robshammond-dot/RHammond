@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>Robyn Hammond — Cover Letter</title>
+<title>Robyn Hammond — Operations & CRM</title>
 <style>
   :root{
     --wine:#6b1530;
@@ -20,132 +20,200 @@
     background:var(--stone);
     color:var(--ink);
     font-family:Arial, Helvetica, "Segoe UI", sans-serif;
-    line-height:1.7;
+    line-height:1.6;
     -webkit-font-smoothing:antialiased;
   }
-  .sheet{max-width:820px; margin:0 auto; background:var(--paper);}
+  .sheet{max-width:860px; margin:0 auto; background:var(--paper);}
 
+  /* Header band */
   .hero{
     background:var(--wine);
     color:#fff;
-    padding:44px 64px 36px;
+    padding:56px 64px 44px;
     position:relative;
     overflow:hidden;
+  }
+  .hero-text{
+    max-width:600px;
   }
   .hero::after{
     content:"";
     position:absolute;
     right:-60px; top:-60px;
-    width:220px; height:220px;
+    width:260px; height:260px;
     border-radius:50%;
     border:1.5px solid rgba(255,255,255,0.18);
   }
-  .hero-text{max-width:600px;}
   .name{
-    font-size:clamp(30px, 5vw, 40px);
+    font-size:clamp(40px, 6.4vw, 58px);
     font-weight:900;
     letter-spacing:-0.5px;
-    margin:0 0 4px;
+    margin:0 0 6px;
+    position:relative;
   }
   .role-tag{
-    font-size:12.5px;
+    font-size:14px;
     font-weight:700;
-    letter-spacing:2px;
+    letter-spacing:2.5px;
     text-transform:uppercase;
     color:#f0d9de;
-    margin:0 0 18px;
-    padding-right:110px;
+    margin:0 0 26px;
+    padding-right:130px;
   }
   .contact-row{
     display:flex;
     flex-wrap:wrap;
     gap:8px 20px;
-    font-size:12.5px;
+    font-size:13px;
     color:#fff;
     opacity:0.92;
     border-top:1px solid rgba(255,255,255,0.28);
-    padding-top:14px;
+    padding-top:16px;
   }
+
+  /* Stamp badge, top-right corner, clear of text */
   .stamp{
     position:absolute;
-    right:48px; top:38px;
-    width:76px; height:76px;
+    right:56px; top:52px;
+    width:92px; height:92px;
     border:2px solid #fff;
     border-radius:50%;
     display:flex; align-items:center; justify-content:center;
     background:rgba(255,255,255,0.06);
-    padding:8px;
+    transition:transform 0.35s ease;
+    padding:10px;
   }
+  .stamp:hover{transform:rotate(-8deg) scale(1.05);}
   .stamp-inner{
     text-align:center;
-    font-size:6px;
+    font-size:7px;
     letter-spacing:1px;
     text-transform:uppercase;
     line-height:1.4;
     color:#fff;
-    max-width:58px;
+    max-width:70px;
   }
   .stamp-inner strong{
     display:block;
-    font-size:15px;
+    font-size:18px;
     font-weight:900;
     letter-spacing:1px;
     margin:1px 0;
   }
-  @media (max-width:640px){
+  @media (max-width:680px){
     .stamp{display:none;}
+    .hero{padding:40px 28px 32px;}
     .role-tag{padding-right:0;}
-    .hero{padding:32px 26px 26px;}
   }
 
-  .body-pad{padding:44px 64px 64px;}
-  @media (max-width:640px){ .body-pad{padding:30px 24px 48px;} }
+  .body-pad{padding:44px 64px 80px;}
+  @media (max-width:680px){ .body-pad{padding:32px 24px 60px;} }
 
-  .letter p{font-size:15px; margin:0 0 18px;}
-  .letter p:last-of-type{margin-bottom:0;}
-  .sign{margin-top:8px;}
-  .sign .role-line{
-    font-size:12.5px;
-    color:#6b6668;
-    font-weight:700;
-    letter-spacing:0.3px;
-    margin-top:2px;
-  }
+  section{margin-top:38px;}
+  section:first-child{margin-top:0;}
 
-  .print-btn-row{
-    display:flex;
-    justify-content:flex-end;
-    margin-top:12px;
-  }
-  .print-btn{
-    background:transparent;
-    color:#fff;
-    border:1.5px solid rgba(255,255,255,0.7);
-    font-family:Arial, Helvetica, sans-serif;
+  .eyebrow{
     font-size:12px;
-    font-weight:700;
-    letter-spacing:0.4px;
-    padding:8px 14px;
-    border-radius:8px;
-    cursor:pointer;
-    display:inline-flex;
-    align-items:center;
-    gap:7px;
-    transition:background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    font-weight:800;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--wine);
+    padding-bottom:8px;
+    border-bottom:3px solid var(--wine);
+    display:inline-block;
+    margin-bottom:18px;
   }
-  .print-btn:hover{background:#fff; color:var(--wine); border-color:#fff;}
-  .print-btn svg{width:13px; height:13px;}
 
-  @media print{
-    .print-btn{display:none;}
-    body{background:#fff;}
-    .sheet{max-width:100%;}
-    .hero{-webkit-print-color-adjust:exact; print-color-adjust:exact;}
+  .profile-text{font-size:16px; max-width:70ch;}
+
+  .strengths{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:0;
+    margin:0;
+    padding:0;
+    border-top:1px solid var(--line);
+    border-left:1px solid var(--line);
+  }
+  @media (max-width:680px){ .strengths{grid-template-columns:1fr;} }
+  .strengths li{
+    list-style:none;
+    padding:16px 20px;
+    border-right:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    font-size:14px;
+    cursor:default;
+    transition:background 0.2s ease;
+  }
+  .strengths li:hover{background:var(--stone);}
+  .strengths li strong{
+    display:block;
+    font-size:14.5px;
+    font-weight:800;
+    color:var(--wine-deep);
+    margin-bottom:4px;
+  }
+
+  .role{
+    margin-bottom:14px;
+    border:1px solid var(--line);
+    border-radius:8px;
+    overflow:hidden;
+  }
+  .role-head{
+    display:flex; justify-content:space-between; align-items:center;
+    flex-wrap:wrap; gap:4px 16px;
+    padding:18px 20px;
+    cursor:pointer;
+    background:var(--paper);
+    transition:background 0.2s ease;
+    user-select:none;
+  }
+  .role-head:hover{background:var(--stone);}
+  .role-head-text{flex:1; min-width:200px;}
+  .role-title{font-size:17px; font-weight:800;}
+  .role-org{font-size:13px; font-weight:700; color:var(--wine); margin-top:2px;}
+  .role-dates{font-size:12.5px; font-weight:700; color:#6b6668; white-space:nowrap;}
+  .chevron{
+    width:20px; height:20px;
+    flex-shrink:0;
+    color:var(--wine);
+    transition:transform 0.3s ease;
+  }
+  .role.open .chevron{transform:rotate(180deg);}
+  .role-body{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height 0.35s ease;
+    background:var(--stone);
+  }
+  .role.open .role-body{max-height:600px;}
+  .role-body-inner{padding:4px 20px 20px;}
+  .role p.lead{margin:0 0 10px; font-size:14px; color:#4a4547;}
+  .role ul{margin:0; padding-left:18px;}
+  .role ul li{font-size:14px; margin-bottom:7px;}
+  .hint{
+    font-size:12px;
+    color:#8a8587;
+    margin:-6px 0 20px;
+    font-style:italic;
+  }
+
+  .edu-tools{display:grid; grid-template-columns:1fr 1.4fr; gap:36px;}
+  @media (max-width:680px){ .edu-tools{grid-template-columns:1fr;} }
+  .edu-tools h3{font-size:12px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--wine); margin:0 0 8px;}
+  .edu-tools p{font-size:14px; margin:0;}
+  .tools-list{display:flex; flex-wrap:wrap; gap:8px;}
+  .tools-list span{
+    font-size:12px; font-weight:700;
+    background:var(--stone);
+    border-radius:4px;
+    padding:6px 12px;
   }
 
   footer{
-    margin-top:40px; padding-top:16px; border-top:1px solid var(--line);
-    font-size:10.5px; font-weight:700; letter-spacing:1px; text-transform:uppercase;
+    margin-top:50px; padding-top:18px; border-top:1px solid var(--line);
+    font-size:11px; font-weight:700; letter-spacing:1px; text-transform:uppercase;
     color:#8a8587; text-align:center;
   }
   .cross-link{
@@ -165,6 +233,80 @@
     transition:opacity 0.2s ease;
   }
   .cross-link a:hover{opacity:0.7;}
+
+  /* Entrance animation */
+  @media (prefers-reduced-motion: no-preference){
+    .hero, .fade-in{
+      opacity:0;
+      transform:translateY(14px);
+      animation:riseIn 0.6s ease forwards;
+    }
+    .hero{animation-delay:0s;}
+    .fade-in:nth-of-type(1){animation-delay:0.12s;}
+    .fade-in:nth-of-type(2){animation-delay:0.22s;}
+    .fade-in:nth-of-type(3){animation-delay:0.32s;}
+    .fade-in:nth-of-type(4){animation-delay:0.42s;}
+  }
+  @keyframes riseIn{
+    to{opacity:1; transform:translateY(0);}
+  }
+
+  .expand-all{
+    background:none;
+    border:1px solid var(--wine);
+    color:var(--wine);
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:0.5px;
+    padding:7px 14px;
+    border-radius:6px;
+    cursor:pointer;
+    transition:background 0.2s ease, color 0.2s ease;
+  }
+  .expand-all:hover{background:var(--wine); color:#fff;}
+  .exp-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:2px;
+  }
+
+  .print-btn-row{
+    display:flex;
+    justify-content:flex-end;
+    margin-top:14px;
+  }
+  .print-btn{
+    background:transparent;
+    color:#fff;
+    border:1.5px solid rgba(255,255,255,0.7);
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12.5px;
+    font-weight:700;
+    letter-spacing:0.4px;
+    padding:9px 15px;
+    border-radius:8px;
+    cursor:pointer;
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+    transition:background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  }
+  .print-btn:hover{background:#fff; color:var(--wine); border-color:#fff;}
+  .print-btn svg{width:14px; height:14px;}
+
+  @media print{
+    .print-btn{display:none;}
+    body{background:#fff;}
+    .sheet{max-width:100%;}
+    .hero{-webkit-print-color-adjust:exact; print-color-adjust:exact;}
+    .role-body{max-height:none !important; background:var(--stone) !important; -webkit-print-color-adjust:exact; print-color-adjust:exact;}
+    .role{break-inside:avoid;}
+    .chevron{display:none;}
+    .hint, .expand-all{display:none;}
+    .hero, .fade-in{opacity:1 !important; transform:none !important; animation:none !important;}
+  }
 </style>
 </head>
 <body>
@@ -173,17 +315,16 @@
     <div class="stamp">
       <div class="stamp-inner">Cape Town<strong>RH</strong>South Africa</div>
     </div>
-    <div class="hero-text">
-      <h1 class="name">Robyn Hammond</h1>
-      <p class="role-tag">Operations Specialist &amp; CRM Consultant · Travel &amp; Hospitality</p>
-      <div class="contact-row">
-        <span>Cape Town, South Africa</span>
-        <span>robsloveberry@gmail.com</span>
-        <span>linkedin.com/in/robynhammond-ops-specialist</span>
-      </div>
+    <h1 class="name">Robyn Hammond</h1>
+    <p class="role-tag">Operations Specialist &amp; CRM Consultant · Travel &amp; Hospitality</p>
+    <div class="contact-row">
+      <span>Cape Town, South Africa</span>
+      <span>robsloveberry@gmail.com</span>
+      <span>linkedin.com/in/robynhammond-ops-specialist</span>
+      <span>Remote-first</span>
     </div>
     <div class="print-btn-row">
-      <button class="print-btn" onclick="window.print()">
+      <button class="print-btn" onclick="printPage()">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
         Print / Save as PDF
       </button>
@@ -191,37 +332,184 @@
   </div>
 
   <div class="body-pad">
-    <div class="letter">
-      <p>Dear Hiring Manager,</p>
 
-      <p>I'm applying for the Director of Customer Journey, Operations &amp; Systems role. Travel matters to me because it lets you see the world and all its wonder, meet new people, and truly feel alive, away from deadlines and the normal woes of everyday life. Bespoke luxury travel is where my career started, and it's the piece I've missed most since moving into broader operations and CRM work. This role is the first one I've seen in a while that brings both halves of that back together.</p>
+  <section class="fade-in">
+    <div class="eyebrow">Profile</div>
+    <p class="profile-text">Operations leader with over 20 years in travel and hospitality, including four years as an independent consultant supporting operations, CRM and automation across multiple travel businesses at once. I work closely with owners, senior leadership and technical teams to translate strategy into workable process, covering the customer journey from first enquiry through to post-trip follow-up. I am comfortable being hands-on in implementation as well as setting the operational roadmap. I have led a full CRM build for one client and contributed to CRM implementation, automation and knowledge management for others. I pick up new systems quickly and have taught myself the Freshworks suite from a standing start.</p>
+  </section>
 
-      <p>For the last four years, I've worked as an independent operations consultant supporting three travel businesses at once. I built CRM foundations from scratch for one client with no prior base in place, contribute to digital strategy and automation for another, and bring operational judgement from over a decade in African safari travel operations to a third, understanding first-hand that a team can't spend time on admin when they have a client stranded and needing help. My involvement varies by account, hands-on and close to the day-to-day for some, more strategic for others, working through regular contact with each team. Before that, I spent over a decade in operational and reservations leadership in the travel industry, including at a bespoke African travel operator, so the customer-journey-from-booking-to-travel piece of this role isn't new territory, it's the work I've built my career around.</p>
+  <section class="fade-in">
+    <div class="eyebrow">Core Strengths</div>
+    <ul class="strengths">
+      <li><strong>CRM &amp; Systems</strong>Built CRM foundations from scratch for one client with no prior base in place; configured and supported Freshworks implementation and strategy for others</li>
+      <li><strong>Customer Journey Design</strong>Mapping and improving the journey from enquiry and booking through to travel and post-trip engagement</li>
+      <li><strong>Automation &amp; AI</strong>AI-driven chatbot workflows built to reduce manual handling and improve response times</li>
+      <li><strong>Operational Reporting</strong>Monthly and activity-based reporting to give clients clear visibility of work delivered</li>
+      <li><strong>Knowledge Management</strong>SharePoint knowledge base build and content ownership, reducing training overhead</li>
+      <li><strong>Cross-Functional Delivery</strong>Working directly with CEOs, division heads, IT and technical partners</li>
+      <li><strong>Operational Controls</strong>Supplier SLA management and booking-terms work through complaints and reservations; designed a 50-type booking acceptance workflow with varying supplier terms</li>
+      <li><strong>Fast Platform Learner</strong>Self-taught the full Freshworks suite from a standing start; picks up new systems quickly</li>
+    </ul>
+  </section>
 
-      <p>A few things about this role specifically stood out to me:</p>
+  <section class="fade-in">
+    <div class="exp-row">
+      <div class="eyebrow">Professional Experience</div>
+      <button class="expand-all" id="expandAllBtn" onclick="toggleAll()">Expand all</button>
+    </div>
+    <p class="hint">Click a role to expand</p>
 
-      <p>Owning the customer journey end to end, from enquiry through to post-trip, is exactly the kind of work I do for my current clients, just at a bigger scale and with one business instead of three sharing my attention. I'd be glad to give one company the full depth of what I currently spread across several.</p>
-
-      <p>The emphasis on CRM, automation and AI-driven efficiency is squarely where I already work. I taught myself the Freshworks suite (Freshsales, Freshchat, Freshmarketer, Freddy AI) from scratch and have since built and supported workflow automation and chatbot deployment for several travel businesses. I haven't worked in Airtable or SendGrid specifically, but I've used Freshmarketer for email automation, a comparable platform, and I pick up new systems quickly, so I'd bring that same appetite here.</p>
-
-      <p>Mentoring and developing a Head of Operations, and sitting on a senior leadership team, is a step up in scope from where I sit today, and it's exactly the kind of growth I'm looking for. I've led teams and trained consultants throughout my career, and I'm ready to do that at this level.</p>
-
-      <p>I also genuinely love working alongside the people who make the sale, and building the systems and support that let them deliver it well. That's the part of this job I'd enjoy most: being behind the scenes making sure a beautifully planned trip actually runs the way it was promised.</p>
-
-      <p>I've spent the last several years being the person who keeps the systems running for other people's businesses. I'd welcome the chance to bring that same ownership to one company, full time, and to work in bespoke travel again properly, not just adjacent to it.</p>
-
-      <p>I'd welcome the opportunity to discuss how my background could support your team.</p>
-
-      <div class="sign">
-        <p>Kind regards,</p>
-        <p style="margin-bottom:0;">Robyn Hammond</p>
-        <div class="role-line">Operations Specialist &amp; CRM Consultant</div>
+    <div class="role open">
+      <div class="role-head" onclick="toggleRole(this)">
+        <div class="role-head-text">
+          <div class="role-title">Freelance Operations Specialist &amp; CRM Consultant</div>
+          <div class="role-org">Independent · Aug 2022 – Present</div>
+        </div>
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="role-body">
+        <div class="role-body-inner">
+          <p class="lead">Embedded operations partner to three travel businesses concurrently; depth of CRM involvement varies by account.</p>
+          <ul>
+            <li><strong>Sports travel specialist —</strong> collaborate on annual digital strategy; implemented an AI chatbot, built waitlist and bulk-mail automation, extending automation into the booking journey; built a DocuSign-based booking acceptance workflow across 50 booking types and varying supplier terms, later succeeded by a simpler, supplier-linked system from the CRM provider's tech team; coordinated an outsourced partner to connect Freshsales with Qlik for reporting</li>
+            <li><strong>B2B luxury African travel operator —</strong> draw on 11 years' prior African safari operations experience to digitise and formalise existing processes, including a WhatsApp-based in-trip feedback journey, Brazilian Portuguese translation of FAM trip materials, and digitising paper-based forms; built and maintain the SharePoint knowledge base</li>
+            <li><strong>B2C travel fulfilment team —</strong> built CRM foundations from the ground up, including process documentation and a Freshsales sandbox, for a team with no prior base in place; developing chatbot automation, a SharePoint knowledge hub, and training and onboarding modules</li>
+          </ul>
+        </div>
       </div>
     </div>
 
-    <footer>Robyn Hammond · Cover Letter</footer>
-    <div class="cross-link"><a href="PASTE-CV-LINK-HERE" target="_blank" rel="noopener">View my CV →</a></div>
+    <div class="role">
+      <div class="role-head" onclick="toggleRole(this)">
+        <div class="role-head-text">
+          <div class="role-title">Project Manager | FreshCRM &amp; FreshChat Specialist</div>
+          <div class="role-org">Matogen Digital · Feb 2022 – Sep 2025</div>
+        </div>
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="role-body">
+        <div class="role-body-inner">
+          <ul>
+            <li>Owned end-to-end client communication and relationship management across a portfolio of travel-industry accounts</li>
+            <li>Ran project management processes including backlog preparation, sprint planning and timeline management</li>
+            <li>Designed and deployed advanced Freshchat bot flows across website, WhatsApp and social channels</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="role">
+      <div class="role-head" onclick="toggleRole(this)">
+        <div class="role-head-text">
+          <div class="role-title">Chief Information Officer</div>
+          <div class="role-org">Ker &amp; Downey Africa · Aug 2019 – Feb 2020</div>
+        </div>
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="role-body">
+        <div class="role-body-inner">
+          <ul>
+            <li>Assessed company-wide systems, IT infrastructure and processes to identify gaps and recommend improvements</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="role">
+      <div class="role-head" onclick="toggleRole(this)">
+        <div class="role-head-text">
+          <div class="role-title">Digital Operations Manager</div>
+          <div class="role-org">Cullinan Holdings Limited · Apr 2018 – Aug 2019</div>
+        </div>
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="role-body">
+        <div class="role-body-inner">
+          <ul>
+            <li>Planned, delegated and measured results across key digital projects, identifying process gaps</li>
+            <li>Advised sales teams on converting digital leads and maximising marketing effectiveness</li>
+            <li>Held responsibility for CRM recommendations, QA of new developments, recruitment and training</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="role">
+      <div class="role-head" onclick="toggleRole(this)">
+        <div class="role-head-text">
+          <div class="role-title">Digital Customer Service &amp; Sales Specialist, then Digital Operations Manager</div>
+          <div class="role-org">Cullinan Holdings Limited · May 2016 – Mar 2018</div>
+        </div>
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="role-body">
+        <div class="role-body-inner">
+          <ul>
+            <li>Implemented training, CRM and recruitment solutions across brands; optimised digital sales pipelines</li>
+            <li>Assessed infrastructure weaknesses and applied automation to boost conversion and efficiency</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="role">
+      <div class="role-head" onclick="toggleRole(this)">
+        <div class="role-head-text">
+          <div class="role-title">Operations Manager, Reservations Manager &amp; Sales Leadership</div>
+          <div class="role-org">Go2Africa · Mar 2003 – Apr 2016</div>
+        </div>
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="role-body">
+        <div class="role-body-inner">
+          <ul>
+            <li>Progressed from sales consultant through team leadership into Reservations Manager and Operations Manager</li>
+            <li>Owned day-to-day operations, system development and service delivery against business objectives</li>
+            <li>Led business system training and induction for new teams, including a graduate development programme</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="edu-tools fade-in">
+    <div>
+      <h3>Education</h3>
+      <p>Diploma, Travel &amp; Tourism Management<br>Tygerberg College (Northlink), 2001–2002</p>
+    </div>
+    <div>
+      <h3>Systems &amp; Tools</h3>
+      <div class="tools-list">
+        <span>Freshsales</span><span>Freshchat</span><span>Freshmarketer</span><span>Freddy AI</span>
+        <span>SharePoint</span><span>Microsoft Forms</span><span>Power Automate</span><span>WhatsApp Business API</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>Robyn Hammond · Operations Specialist &amp; CRM Consultant</footer>
+  <div class="cross-link"><a href="PASTE-COVER-LETTER-LINK-HERE" target="_blank" rel="noopener">Read my cover letter →</a></div>
+
   </div>
 </div>
+<script>
+  function toggleRole(headEl){
+    const role = headEl.parentElement;
+    const wasOpen = role.classList.contains('open');
+    document.querySelectorAll('.role.open').forEach(r => r.classList.remove('open'));
+    if(!wasOpen){ role.classList.add('open'); }
+    document.getElementById('expandAllBtn').textContent = 'Expand all';
+  }
+  function toggleAll(){
+    const btn = document.getElementById('expandAllBtn');
+    const roles = document.querySelectorAll('.role');
+    const allOpen = btn.textContent === 'Collapse all';
+    roles.forEach(r => r.classList.toggle('open', !allOpen));
+    btn.textContent = allOpen ? 'Expand all' : 'Collapse all';
+  }
+  function printPage(){
+    document.querySelectorAll('.role').forEach(r => r.classList.add('open'));
+    window.print();
+  }
+</script>
 </body>
 </html>
