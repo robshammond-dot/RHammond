@@ -101,9 +101,16 @@
     margin:1px 0;
   }
   @media (max-width:680px){
-    .stamp{display:none;}
+    .stamp{
+      width:56px; height:56px;
+      right:24px; top:24px;
+      padding:6px;
+    }
+    .stamp-inner{font-size:5px; letter-spacing:0.6px; max-width:42px;}
+    .stamp-inner strong{font-size:11px; margin:0;}
     .hero{padding:40px 28px 32px;}
     .role-tag{padding-right:0;}
+    .name{padding-right:70px;}
   }
 
   .body-pad{padding:44px 64px 80px;}
